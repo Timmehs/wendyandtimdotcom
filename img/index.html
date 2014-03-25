@@ -1,0 +1,331 @@
+<HTML>
+<HEAD>
+	<!-- CASCADING STYLE SHEET(S) -->
+	<link rel="stylesheet" type="text/css" href="style/page_style.css">
+	<link rel="stylesheet" type="text/css" href="style/jquery.jscrollpane.css">
+	<!-- jquery library -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+	<!-- CYCLE PLUGIN FOR PHOTOS -->
+	<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
+	<!-- MY ENDLESS LINES OF FUCKING JAVASCRIPT-->
+	<SCRIPT language="JavaScript">
+	$(document).ready(function() {
+		$('#story1').cycle({
+			fx: 'scrollRight',
+			next: '#story1',
+			timeout: 7000,
+			// choose your transition type, ex: fade, scrollUp, shuffle, etc...
+				});
+			});
+	
+	
+	var hider; // CURRENT DISPLAYED CONTENT
+	hider = "#story1";
+	var hiderButton;
+	cparty = "#boys1";
+	//MENU FUNCTIONALITY
+	$(document).ready(function(){
+			$(".menubtn").hover(
+				function(){
+						$(this).css({"background-color":"#A67F00","color":"#FFDE73"});
+						},
+				function(){
+					var checker = "#" + $(this).attr('id');
+					hiderButton = hider.slice(0,-1);
+					if(checker == hiderButton) {
+						return;
+						}
+					else {
+					$(this).css({"background-color":"#FFDE73","color":"#A67F00"});
+					};
+				});
+		});
+	
+	function navigate(current) {
+		var cobject = "#" + $(current).attr('id') + 1;
+		if (hider == cobject ) {
+			return;
+			}
+		else if (hider != "#story1")
+			{	$(hiderButton).css({"background-color":"#FFDE73","color":"#A67F00"});
+				$(hider).hide();
+				$(cobject).fadeIn();
+				hider = cobject;
+			}
+		else {
+			$(hider).hide();
+				$(cobject).fadeIn();
+				hider = cobject;
+			}
+			
+		}
+		
+		
+	//BRIDAL PARTY FUNCTIONALITY
+	function partyswitch(party) {
+		var switchto = "#" + $(party).attr('id') + 1;
+		if (switchto == cparty) {
+			return;
+			}
+		else {
+			$(cparty).hide();
+			$(switchto).fadeIn();
+			cparty = switchto;
+		}
+		if (cparty == "#girls1") {
+			$("#boys").css( "color", "#A67F00");
+			$("#girls").css( "color", "#FFD240");
+			}
+		else {
+			$("#boys").css( "color", "#FFD240");
+			$("#girls").css( "color", "#A67F00");
+			}
+		
+		}
+	//SLIDESHOW FUNCTION
+	$(document).ready(function() {
+		$('.slideshow').cycle({
+			fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+			});
+		});
+	//NEW WINDOW For LINKS
+	function popUp(website) {
+		window.open(website, 'open_window','width=800,height=700');
+		}
+	function jSp(){
+		$('#location1').jScrollPane({verticalDragMinHeight: 30,
+			verticalDragMaxHeight: 30,});
+			};
+	</script>
+</HEAD>
+
+<BODY>
+<div id="loading">
+  <img id="loading-img" src="img/ajax-loader.gif" alt="Loading..." /><br><br>
+  ...Loading...
+</div>
+<center>
+<DIV id="header">
+	<H1 id="story" onclick="navigate(this)">Tim & Wendy <br><font size="20"><I><font color="white">             are getting married!</I></H1>
+	<!-- End Header-->
+	</DIV>
+
+<DIV id="container">
+	<table id="menu">
+				<td class="menubtn" id="party" onclick="navigate(this);">Party People</td>
+				<td class="menubtn" id="location" onclick="navigate(this); jSp();">Location</td>
+				<td class="menubtn" id="activities" onclick="navigate(this);">Activities</td>
+				<td class="menubtn" id="registry" onclick="navigate(this);">Registry</td>
+				<td class="menubtn" id="rsvp" onclick="navigate(this);">RSVP</td>
+			</table>
+	<DIV id="content">
+	
+		<div id="story1" class="content">
+				<img src="img/mexico.jpg" />
+				<img src="img/waka.jpg" />
+				<img src="img/wt11.jpg" />
+		</div>
+
+		<div id="party1" class="content">
+				<h2 style="text-align: left; font-size: 30">The Bridal Party: <text id="boys" style="color: #FFD240" onclick="partyswitch(this);">The Boys</text> | <text onclick="partyswitch(this);" id="girls" color="FFD240">The Girls</text></h2>								<div id="boys1" class="bridalparty">
+					<table>
+						<th colspan="4"><h3>Groomsmen</h3></th>
+						<tr>
+							<td>
+								<img src="img/justin.jpg">
+							</td>
+							<td>
+								<P><B>Justin Norman</B>
+								<br>Best Man
+								</P>
+							</td>
+							<td>
+								<img src="img/thom.jpg">
+							</td>
+							<td>
+								<P><B>Thomas Puhek</B>
+								<br>Mansman, Adventurer
+								</P>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="img/ricky.jpg"></td>
+							<td>
+								<P><B>Ricky Pugh</B>
+								<br>Buckaroo
+								</P>
+							</td>
+							<td>
+								<img src="img/andy1.jpg">
+							</td>
+							<td>
+								<P><B>Andy Appleton</B>
+								<br>El Chico Sucio
+								</P>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="img/miles.jpg"></td>
+							<td>
+								<P><B>Miles Atkinson</B>
+								<br>El Jefe De La Casa 
+								</P>
+							</td>
+							<td><img src="img/jeff.jpg"></td>
+							<td>
+								<P><B>Jeff Roman</B>
+								<br>Chief Justiciar
+								</P>
+							</td>
+						</tr>
+						
+					</table>				
+				<!--END BOYS-->
+				</div>
+				<div id="girls1" class="bridalparty">
+					<table id="girlz">
+						<th colspan="4" style="text-align: right;"><h3>Bridesmaids</h2></th>
+						<tr>
+							<td>
+								<P><B>Keri Shewmaker</B>
+								<br>Maid of Honor
+								</P>
+							</td>
+							<td>
+								<img src="img/keri.jpg"></img>
+							</td>
+							<td>
+								<P><B>Angel Peil Tung</B>
+								<br>Matron of Honor
+								</P>
+							</td>
+							<td>
+								<img src="img/angel.jpg"></img>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<P><B>Sarah Egerman</B>
+								<br>
+								</P>
+							</td>
+							<td>
+								<img src="img/sarae.jpg">
+							</td>
+							<td>
+								<P><B>Laurie Robinson</B>
+								<br>
+								</P>
+							</td>
+							
+							<td>
+								<img src="img/laurie.jpg"></img>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>
+								<P><B>Sarah Buschman</B>
+								<br>
+								</P>
+							</td>
+							<td>
+								<img src="img/sara.jpg"></img>
+							</td>
+							<td>
+								<P><B>Lindsay Sandberg</B>
+								<br>"Lou Lou!"
+								</P>
+							</td>
+							
+							<td>
+								<img src="img/lindsay.jpg"></img>
+								</td>
+							
+						</tr>
+					</table>
+				</div><!--END GIRLS-->
+			
+		
+			</div>	<!-- END PARTY-->
+			
+		<div id="location1">
+				<table id="deer" cellpadding=5>
+					<th colspan="2" style="border-bottom: 1 solid #00A779;"><h2>Deer Crossing Inn</h2></th>
+					<tr>
+						<td>
+							<center>
+							<img  width="101%" src="img/housefront.jpg">
+							</td>
+						<td style="padding-left:40;">
+							<text id="address" >
+								Deer Crossing Inn.<br>
+								21600 Eden Canyon Rd.<br>
+								Castro Valley, CA 94552<br>
+								<a href="" onclick="popUp('http://deercrossinginn.com')">Deer Crossing Inn Website</a>
+							</text>
+								
+						</td>
+					<tr>
+						<td colspan="2" style="vertical-align: top; text-align: left;height: 110;" >
+						<text id="blurb">
+								This 4500 square ft Chalet style home has 4 split levels. We describe them from top down as: Upper, Mid-Upper, Mid-Lower and Lowest. Each level is separated by 1/2 fliWHO CARES THERE IS A HOT TUB!!!!
+							</text>
+						</td>
+				</table>
+	
+		<text id="address">Nearby Accomodations: Marriott Pleasanton
+		<br>1950 Dublin Canyon Road
+		<br>Pleasanton, CA 94588
+		<br>Hotel Front Desk: 925-847-6000
+		<br>Hotel Fax: 925-463-2585
+		<br>1950 Dublin Canyon Road
+		<br>Pleasanton, CA 94588
+		<br>Hotel Front Desk: 925-847-6000
+		<br>Hotel Fax: 925-463-2585
+		<br>1950 Dublin Canyon Road
+		<br>Pleasanton, CA 94588
+		<br>Hotel Front Desk: 925-847-6000
+		<br>Hotel Fax: 925-463-2585
+		<br>1950 Dublin Canyon Road
+		<br>Pleasanton, CA 94588
+		<br>Hotel Front Desk: 925-847-6000
+		<br>Hotel Fax: 925-463-2585
+		</text>
+			</div>
+		
+		<div id="activities1" class="content">
+			<h1>activities</h2>
+			<p>TBA!</p>
+			</div>
+			
+		<div id="registry1" class="content">
+			<h1>Registry</h1>
+			<h2>Somethin bout honey fund<h2>
+			</div>
+			
+		<div id="rsvp1" class="content">
+			<h1>rsvp</h1>
+			</div>
+
+	<!--END CONTENT-->
+	</div>
+	
+	<DIV id="footer"> <!--NAVIGATION -->
+		<center>
+		<text onclick="popUp('http://www.deercrossinginn.com');">Deer Crossing Inn | Castro Valley, CA | June 15th, 2013 | 4:30 P.M.
+	</DIV>
+
+
+
+	<!--END CONTAINER-->
+</DIV>
+<script language="javascript" type="text/javascript">
+  $(window).load(function() {
+      setTimeout("$('#loading').fadeOut('slow');", 1000);
+	  });
+</script>
+</BODY>
+</HTML>
