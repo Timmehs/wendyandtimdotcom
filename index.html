@@ -1,0 +1,425 @@
+<HTML>
+<HEAD>
+	<title>Wendy and Tim: THE WEDDING...</title>
+	<!-- CASCADING STYLE SHEET(S) -->
+	<link rel="stylesheet" type="text/css" href="style/page_style.css">
+	<link rel="stylesheet" type="text/css" href="style/jquery.jscrollpane.css">
+	<!-- jquery library -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="script/myscripts.js"></script>
+	<!-- CYCLE PLUGIN FOR PHOTOS -->
+	<script type="text/javascript" src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
+	<script>
+	$(function(){
+		$('#story1').hover(
+			function() { $('#controls').fadeIn(); },
+			function() { $('#controls').fadeOut(); }
+		);
+	});
+
+	</script>
+	</HEAD>
+
+
+<BODY>
+<center>
+<div id="shadow">
+<DIV id="header">
+	<H1 id="story" onclick="navigate(this)">Tim & Wendy <br><font size="20"><I><font color="white">             are getting married!</I></H1>
+	<!-- End Header-->
+	</DIV>
+
+<DIV id="container">
+	<table id="menu">
+				<td class="menubtn" id="party" onclick="navigate(this);">Party People</td>
+				<td class="menubtn" id="location" onclick="navigate(this); jSp();">Location</td>
+				<td class="menubtn" id="activities" onclick="navigate(this);$('#act1').show();">Schedule</td>
+				<td class="menubtn" id="registry" onclick="navigate(this); jInit();">Registry</td>
+				<td class="menubtn" id="rsvp" onclick="navigate(this);jInit2();pwLoad()">RSVP</td>
+			</table>
+	<DIV id="content">
+		<div id="story1" class="content">
+			
+			<div id="slideshow" style="height:500;width: 900;" >
+				<img src="img/wt1.jpg" />
+				<img src="img/wt2.jpg" />
+				<img src="img/wt3.jpg" />
+				<img src="img/wt4.jpg" />
+				<img src="img/wt5.jpg" />
+				<img src="img/wt6.jpg" />
+				<img src="img/wt7.jpg" />
+				<img src="img/wt14.jpg" />
+				<img src="img/wt8.jpg" />
+				<img src="img/wt9.jpg" />
+				<img src="img/wt10.jpg" />
+				<img src="img/wt11.jpg" />
+				<img src="img/wt12.jpg" />
+				<img src="img/wt13.jpg" />
+			</div>
+		</div>
+		<div id="party1" class="content">
+				<h2 style="text-align: center; font-size: 30">The Bridal Party: <text id="boys" onclick="partyswitch(this);">The Boys</text> | <text onclick="partyswitch(this);" id="girls">The Girls</text></h2>
+				<div id="boys1" class="bridalparty">
+					<table>
+						<th colspan="4"><h3>Groomsmen</h3></th>
+						<tr>
+							<td>
+								<img src="img/justin.jpg">
+							</td>
+							<td>
+								<P><B>Justin Norman</B>
+								<br>Best Man
+								</P>
+							</td>
+							<td>
+								<img src="img/thom.jpg">
+							</td>
+							<td>
+								<P><B>Thomas Puhek</B>
+								<br>Mansman, Adventurer
+								</P>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="img/ricky.jpg"></td>
+							<td>
+								<P><B>Ricky Pugh</B>
+								<br>Buckaroo
+								</P>
+							</td>
+							<td>
+								<img src="img/andy1.jpg">
+							</td>
+							<td>
+								<P><B>Andy Appleton</B>
+								<br>El Chico Sucio
+								</P>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="img/miles.jpg"></td>
+							<td>
+								<P><B>Miles Atkinson</B>
+								<br>El Jefe De La Casa 
+								</P>
+							</td>
+							<td><img src="img/jeff.jpg"></td>
+							<td>
+								<P><B>Jeff Roman</B>
+								<br>Chief Justiciar
+								</P>
+							</td>
+						</tr>
+						
+					</table>				
+				<!--END BOYS-->
+				</div>
+				<div id="girls1" class="bridalparty">
+					<table id="girlz">
+						<th colspan="4" style="text-align: right;"><h3>Bridesmaids</h2></th>
+						<tr>
+							<td>
+								<P><B>Keri Shewmaker</B>
+								<br>Maid of Honor
+								</P>
+							</td>
+							<td>
+								<img src="img/keri.jpg"></img>
+							</td>
+							<td>
+								<P><B>Angel Peil Tung</B>
+								<br>Matron of Honor
+								</P>
+							</td>
+							<td>
+								<img src="img/angel.jpg"></img>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<P><B>Sarah Egerman</B>
+								<br>Sarita Bonita
+								</P>
+							</td>
+							<td>
+								<img src="img/sarae.jpg">
+							</td>
+							<td>
+								<P><B>Laurie Robinson</B>
+								<br>Ms. Robinson
+								</P>
+							</td>
+							
+							<td>
+								<img src="img/laurie.jpg"></img>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>
+								<P><B>Sarah Buschman</B>
+								<br>BUSCHMAN!
+								</P>
+							</td>
+							<td>
+								<img src="img/sara.jpg"></img>
+							</td>
+							<td>
+								<P><B>Lindsay Sandberg</B>
+								<br>Lou Lou
+								</P>
+							</td>
+							
+							<td>
+								<img src="img/lindsay.jpg"></img>
+								</td>
+							
+						</tr>
+					</table>
+				</div><!--END GIRLS-->
+			
+		
+			</div>	<!-- END PARTY-->
+			
+		<div id="location1">
+				<table cellpadding="5" id="deer">
+					<th  colspan="2" style="height: 35px;padding: 0 0 0 0;border-bottom: 1 solid #00A779;"><h2 style="padding-bottom: 0px; margin-bottom: 0px;" onclick="$('#deerbottom').show();">Deer Crossing Inn</h2></th>
+					<tr>
+						<td>
+							<center>
+								<img  src="img/housefront.jpg" onclick="popUp('http://deercrossinginn.com')" style="cursor: hand;">
+								
+							</td>
+						<td id="address">
+								Deer Crossing Inn.<br>
+								21600 Eden Canyon Rd.<br>
+								Castro Valley, CA 94552<br>
+								<a href="" onclick="popUp('http://deercrossinginn.com')">Deer Crossing Inn Website</a><br>
+								<a href="https://maps.google.com/maps?q=deer+crossing+inn&hl=en&ll=37.718183,-122.004719&spn=0.132394,0.264187&hq=deer+crossing+inn&hnear=Oakland,+California&t=h&z=13&iwloc=A')">Map</a>
+						</td>
+					<tr>
+						<td colspan="2" style="vertical-align: top; text-align: left;height: 110;" >
+							<text id="blurb">
+									This 4500 square ft Chalet style home has 4 split levels. We describe them from top down as: Upper, Mid-Upper, Mid-Lower and Lowest. Each level is separated by 1/2 flight of stai-WHO CARES THERE IS A HOT TUB!!!!  In all seriousness, we hope you will enjoy the charm of the Deer Crossing Inn and its beautiful surroundings as much as we do. <B>***Bay Area People: We will have cars shuttling people from Castro Valley Bart to the wedding. Since parking is limited, we encourage everyone to park at the Bart station and carpool or take one of our shuttles to the venue. Thank you!</b>
+								</text>
+						</td>
+						
+				</table>
+				<table id="hotel" cellpadding=5>
+					<th colspan="2" style="border-bottom: 1 solid #00A779;text-align:right"><h2>Marriott Pleasanton</h2></th>
+					<tr>
+						<td style="text-align:right; padding-left:40;">
+							<text id="address" >
+								Marriott Pleasanton<br>
+								11950 Dublin Canyon Rd<br>
+								Pleasanton, CA 94588<br>
+								<button id="resbtn" onclick="popUp('http://www.marriott.com/hotels/travel/oakmc?groupCode=peipeia&app=resvlink&fromDate=6/14/13&toDate=6/16/13&stop_mobi=yes')">Reservations!</button>
+							</text>
+						</td>
+						<td>
+							<center>
+							<img  width="101%" src="img/hotel.jpg">
+							</td>
+					<tr>
+						<td colspan="2" style="vertical-align: top; text-align: left;height: 110;" >
+						<text id="blurb">
+								We have a special reduced rate with the Marriott on a block of rooms for
+								the nights of 6/14 - 6/15.  The hotel is located about a 10 minute drive
+								from the hotel and will provide shuttle transportation to and from the wedding
+								on the day of the event.  How CONVENIENT!
+								</text> 
+						</td>
+				</table>
+		
+		</div>
+		<div id="activities1" class="content">
+			<table id="bigday">
+					<th colspan="2"><h2 style="margin-left: 20px;font-size: 26;margin-bottom: 10px;">The "Big Day"</h2></th>
+				<tr>
+					<td class="left" style="text-align: right;">
+					
+						<h3>4:00pm</h3>
+						</td>
+					<td>
+					Welcome Cocktails
+					</td>
+				<tr>
+					<td class="left" style="text-align: right;">
+					<h3><font style="color: maroon; font-size: 12px;">*Marriott Guests:</font></h3></td>
+					<td>
+						<font style="font-size: 12px;">Shuttles from Marriott to Deer Crossing Inn at <font color="red">2:15pm (family only)</font>, <font color="red">3:00pm</font>, <font color="red">3:45pm</font>, and <font color="red">4:30pm</font>
+					</td>
+					
+			<tr>
+				<td class="left" style="text-align: right;">
+					<h3><font style="color: maroon; font-size: 12px;">*BART Travellers:</font></h3></td>
+					<td>
+						<font style="font-size: 12px;">Shuttles from Castro Valley BART to Deer Crossing Inn at <font color="red">3:00pm</font>, <font color="red">3:45pm</font>, <font color="red">4:30pm</font>
+					</td>	
+					
+					<tr>
+					
+					<td class="left"  style="text-align: right;">
+						<h3>5:00pm</h3>
+						</td>
+					<td>
+					Wedding Ceremony
+					</td>
+				<tr>
+					<td  class="left" style="text-align: right;">
+						<h3>5:15pm</h3>
+						</td>
+					<td>
+					Cocktail 'Hour'
+					</td>
+				<tr>
+					<td  class="left" style="text-align: right;">
+						<h3>6:00pm</h3>
+						</td>
+					<td>
+					Reception Dinner
+					</td>
+				<tr>
+					<td  class="left" style="text-align: right;">
+						<h3>8:00pm</h3>
+						</td>
+					<td>
+					Fun fun fun!
+					</td>
+				<tr>
+				
+				<tr>
+				<td class="left" style="text-align: right;">
+					<h3><font style="color: maroon; font-size: 12px;">*Marriott Guests:</font></h3></td>
+					<td>
+						<font style="font-size: 12px;">Shuttles back to the hotel will leave at <font color="red">9:00pm</font>, <font color="red">10:00pm</font>, <font color="red">11:00pm</font>, and <font color="red">12:00am</font>
+					</td>
+					
+			<tr>
+				<td class="left" style="text-align: right;">
+					<h3><font style="color: maroon; font-size: 12px;">*BART Travellers:</font></h3></td>
+					<td>
+						<font style="font-size: 12px;">Shuttles will be taking guests back to BART at <font color="red">9:30pm</font>, <font color="red">10:30pm</font>, <font color="red">11:30pm</font>
+					</td>
+				</table>
+			
+			
+			
+			<table id="act1" class="ui-widget-content">
+			<tr>
+			<th style="padding-top: 0;">Important Dates</th>
+			<tr>
+				<td>
+					<h3>May 25-27:</h3>
+					Bachelor/Bachelorette weekend
+				
+				<h3>June 14:</h3>
+				
+					2pm Check-in at the Deer Crossing Inn for the wedding party and close friends.
+					
+				<h3>June 15:</h3>
+				
+					THE BIG DAY!
+			</table>
+			
+			</div>
+			
+		<div id="registry1" class="content">
+			<table id="reg" style="margin-top: 20;">
+			<th><h2>Registry</h2></th>
+			<tr>
+			<td>
+				<div id="honey">
+				Please help us take the trip of our dreams for our honeymoon!  We're dusting off our high school French and planning a honeymoon that starts in Paris and ends somewhere on the Mediterranean coast.  Visit our HoneyFund website for a list of honeymoon experiences you can help us achieve.
+				</div>
+				</td>
+				
+			<tr>
+			<td>
+			<center>
+			<br>
+			<a onclick="popUp('http://www.honeyfund.com/wedding/wendytim')" style="text-align:left;background:url('http://www.honeyfund.com/share/honeyfund3.png') no-repeat; border: 1 solid black;cursor: hand;display:block;width:200px;border-radius: 10;height:100px;text-indent:-9999em;">Visit our honeyfund at Honeyfund.com, the free honeymoon registry</a>
+			</td>
+			<tr>
+			<td>
+				
+			<div id="honey">
+			Of course if you already had a special gift in mind, bring it on!
+			</div>
+			</td>
+			</table>
+		
+			
+			</div>
+			
+		<div id="registry1" class="content">
+			<table id="reg" style="margin-top: 20;">
+			<th><h2>Registry</h2></th>
+			<tr>
+			<td>
+				<div id="honey">
+				If you'd like to make a gift to commemorate the occasion, please help us take the trip of our dreams for our honeymoon!  We're dusting off our high school French and planning a honeymoon that starts in Paris and ends in the French Riviera.  Visit our HoneyFund website for a list of honeymoon experiences you can help us achieve.
+				</div>
+				</td>
+				
+			<tr>
+			<td>
+			<center>
+			<br>
+			<a onclick="popUp('http://www.honeyfund.com/wedding/wendytim')" style="text-align:left;background:url('http://www.honeyfund.com/share/honeyfund3.png') no-repeat; border: 1 solid black;cursor: hand;display:block;width:200px;border-radius: 10;height:100px;text-indent:-9999em;">Visit our honeyfund at Honeyfund.com, the free honeymoon registry</a>
+			</td>
+			<tr>
+			<td>
+				
+			<div id="honey">
+			Of course if you already had a special gift in mind, bring it on!
+			</div>
+			</td>
+			</table>
+		
+			
+			</div>
+		<script>
+			$('#pwInput').addEventListener('keypress', function(event) {
+				if (event.keyCode == 13) {
+					alert('monkey');
+				}
+			});
+		</script>
+		<div id="rsvp1" class="content" onload="pwLoad();">
+					<div id="wufoo-r7x2z1">
+					<P style="font-size: 14px; color: black;margin: 0 0 10 0; padding: 0 0 0 0;">(if you have trouble with the form below, <a href="http://wendyandtim.wufoo.com/forms/rsvp-machine/"> use this link</a>)</P>
+					Fill out my <a href="http://wendyandtim.wufoo.com/forms/r7x2z1">online form</a>.
+				</div>
+			<script type="text/javascript">var r7x2z1;(function(d, t) {
+			var s = d.createElement(t), options = {
+			'userName':'wendyandtim', 
+			'formHash':'r7x2z1', 
+			/*'autoResize':true,*/
+			'width':'550',
+			'async':true,
+			'header':'show'};
+			s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+			s.onload = s.onreadystatechange = function() {
+			var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+			try { r7x2z1 = new WufooForm();r7x2z1.initialize(options);r7x2z1.display(); } catch (e) {}};
+			var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+			})(document, 'script');</script>
+				<!--END CONTENT-->
+				</div>
+	
+	<DIV id="footer"> <!--FOOTER -->
+		<center>
+		<text onclick="popUp('http://www.deercrossinginn.com');">Deer Crossing Inn | Castro Valley, CA | June 15th, 2013 | 4:30 P.M. | </text><text><a href="mailto:peisandberg@gmail.com">Contact Us</a></text>
+	</DIV>
+
+
+
+	<!--END CONTAINER-->
+</DIV>
+</DIV><!--shadow-->
+
+</BODY>
+</HTML>

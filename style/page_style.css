@@ -1,0 +1,371 @@
+body {
+	margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;
+	background-image: url('../img/squid21.gif');
+	}
+#spanky  {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow: none;
+	background-color: black;
+	font-size: 15;
+	font-family: Arial;
+	opacity: 0.5;
+	}
+#spanky img {
+	float:bottom;
+	margin-top: 20%;
+	}
+#header {
+	text-align: center;
+	width: 900;
+	height: 150;
+	background-color: #35D3A7; 
+	border-radius: 0 47 0 0;
+	cursor: hand;
+	}
+#shadow {
+	height: 722;
+	width: 900;
+	top: 20;
+	padding: 0;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+	border-radius: 0px 50px 0px 45px;
+	position: relative;
+	border: 3 solid #4D3B00;
+	}
+#header h1 {
+	cursor:hand;
+	color:#006D4F;
+	font-family: Georgia;
+	}
+
+#menu {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 0;
+	font-family: Georgia;
+	}
+#menu td{
+	height: 20px;
+	width: 20%;
+	text-align: center;
+	font-size: 25;
+	font-family: Georgia, serif;
+	font-style: bold;
+	color: #A67F00;
+	background-color: #FFDE73;
+	cursor: hand;
+	}
+
+
+#container {
+	width: 900;
+	height: 600px;
+	}
+#footer {
+	background-color: #FFDE73; 
+	width: 100%;
+	height: 35;
+	border-bottom-left-radius: 60;
+	border-bottom-right-radius: 0;
+	padding-top: 5px;
+	}
+#footer text {
+	font-size: 20;
+	font-family: Georgia;
+	color: #A67F00;
+	}
+#footer text a{
+	font-size: 20;
+	font-family: Georgia;
+	color: #A67F00;
+	text-decoration:none;
+	}
+#footer text:hover {
+	cursor: hand;
+	}
+#content {
+	height: 500;
+	width: 900;
+	background-color: white;
+	}
+.content {
+	height: 500;
+	width: 900;
+	position: relative;
+	}
+	
+h1 {
+	font-size: 75;
+	font-family: Georgia, serif;
+	color: #00A779;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	}
+	
+h2 {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 30;
+	color: #00A779;
+	font-style: none;
+	}
+h3 {
+	font-size: 18;
+	font-family: Georgia, serif;
+	}
+
+
+	
+/*PARTY STYLES*/
+ 
+#party1 { display: none;
+		padding-top: 10px;
+		padding-left: 10px;
+		height: 490;
+		width: 900;
+		}
+#party1 h3 {
+	color: #E065BB;
+	}
+#boys {
+	color: #A67F00;
+	cursor: hand;
+	}
+#girls {
+	color: #FFD240;
+	cursor: hand;
+	}
+	
+.bridalparty {
+	width: 700;
+	height: 450;
+	
+	}
+#girls1 {
+	display:none;
+	}
+#boys1 {
+	display:block;
+	}
+. bridalparty text:hover{
+	cursor: hand;
+	}
+	
+.bridalparty h3 {
+	font-size: 25;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	color: #FFD240;
+	}
+.bridalparty table {
+	margin-top: 10px;
+	text-align: left;
+	height: 400;
+	margin-bottom: 0px;
+	border-spacing: 5px;
+
+	}
+.bridalparty table td {
+	width: 160;
+	height: 125;
+	color: #00A779;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	}
+
+.bridalparty table img {
+	width: 120;
+	height: 120;
+	}
+.bridalparty table th{
+	height: auto;
+	border-bottom: 1 solid #C10087;
+	padding: 0 0 0 0;
+	}
+#story1 {
+	display: block
+	}
+/* LOCATION STYLES */
+#location1 {display: none;
+			padding-top: 10px;
+			width: 900;
+			height: 500;
+			overflow: auto;
+			}
+#deer {
+	text-align: left;
+	width: 560;
+	height: 400;
+	}
+#deer td {
+	width: 200;
+	height: 133;
+	}
+#deer img {
+	width: 300;
+	padding: 7px;
+	border: 1 solid #CCCCCC;
+	}
+#deer a, a:visited{
+	color: #C10087;
+	font-size: 16;
+	}
+
+#hotel{
+	margin-top: 20;
+	width: 560;
+	text-align: left;
+	}
+#hotel h2 {
+	color: 006D4F;
+	}
+#hotel td {
+	width: 200;
+	height: 133;
+	}
+#hotel a, a:visited{
+	color: #C10087;
+	font-size: 16;
+	}
+#hotel img {
+	width: 300;
+	padding: 7px;
+	border: 1 solid #CCCCCC;
+	}
+#blurb {
+	color: 006D4F;
+	font-size: 16;
+	font-family: Arial, sans-serif;
+	top: 4;
+	}
+#address {
+	color: #006D4F;
+	font-size: 17;
+	font-family: Arial, sans-serif;
+	line-height: 1.2;
+	}
+#deer a:hover {
+	color: #A67F00;
+	text-decoration: underline;
+	}
+/*ACTIVITIES STYLES*/
+#activities1 {
+	display: none;
+	padding-top:10px;
+	height: 490;
+	}
+#act1 {
+	background-color: white;
+	border: 1 solid black;
+	border-radius: 5px;
+	font-family: Arial, sans-serif;
+	width: 175;
+	float: right;
+	margin-right: 10px;
+	margin-top: 15px;
+	border-spacing: collapse;
+	position:  absolute;
+	top: 10;
+	left: 705;
+	}
+
+#act1 td{
+	padding-left: 11px;
+	padding-bottom: 15px;
+	color: #912470;
+	background-color: white;
+	font-size: 14px;
+	}
+#act1 h3 {
+	font-size: 16;
+	font-family: Arial, serif;
+	color: #00A779;
+	margin-top: 13px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+
+	}
+
+#act1 th {
+	background-color: white;
+	border-bottom: 1 solid #530A3D;
+	color: #00A779;
+	}
+#bigday {
+	border-top: #530A3D;
+	border-collapse: collapse;
+	width: 450;
+	margin-top: 10px;
+	margin-left: 220px;
+	font-size: 15;
+	font-weight: bold;
+	float: left;
+	color: #912470;
+	font-family: Arial, sans-serif;
+	}
+#bigday .left {
+	width: 35;
+	padding: 10 0 0 0;
+	border-right: 1 solid #CCCCCC;
+	padding-right: 6px;
+	}
+#bigday th {
+	border-bottom: 1 solid #00A779;
+	font-family: Georgia; serif;
+	}
+#bigday td {
+	padding-top: 10;
+	width: 200;
+	background-color: white;
+	vertical-align: top;
+	color: #912470;
+	padding-left: 6px;
+	}
+#bigday h3 {
+	font-size: 15;
+	font-family: Arial, serif;
+	color: A67F00;
+	padding: 0px 0px 0px 0px;
+	}
+	
+
+/*REGISTRY STYLES*/
+#registry1 {
+	display: none;
+	padding:15px;
+	} 
+#honey {
+	padding: 10;
+	font-family: Arial, Sans-serif;
+	font-size: 16;
+	line-height: 1.5;
+	text-align: left;
+	width: 500;
+	color: 006D4F;
+	}
+#reg {
+	width: 500;
+	}
+
+
+#reg th {
+	text-align: left;
+	border-bottom: 1 solid #006D4F;
+	padding: 3px;
+	color: white;
+	}
+
+
+#rsvp1 {display: none;
+	padding-top: 20px;
+	background-image: url('../img/background.gif');
+	}
+
+text {
+	font-family: Georgia;
+	font-size: 25;
+	padding: 0;
+	color: #FFD240;
+	}
